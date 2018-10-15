@@ -18,9 +18,8 @@ import pickle
 
 
 # Initiate constants & function
-GITHUB_URL = 'https://raw.githubusercontent.com/cuny-sps-msda-data622-2018fall/fall2018-data622-001-hw2-kylegilde/master/data/'
-FILE_NAMES = ['train.csv?token=AG4nfwEKyKcjomHRiNUMirtyHXl2uvcnks5bw7TawA%3D%3D',
-              'test.csv?token=AG4nfx9Uu166yMWwvgGh_C3JwJsNjyqrks5bw7TEwA%3D%3D']
+GITHUB_URL = 'https://raw.githubusercontent.com/kylegilde/D622-Machine-Learning/master/titanic-data/'
+FILE_NAMES = ['train.csv', 'test.csv?']
 
 
 def validate_df(df):
