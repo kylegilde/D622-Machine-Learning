@@ -1,16 +1,9 @@
 FROM python:3.6.5
 
-RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
-
-COPY requirements.txt /usr/src/app
-
-RUN apt-get update && \
-apt-get install -y postgresql python-psycopg2 libpq-dev cython && \
-pip install — upgrade pip && pip install -r requirements.txt
-
-COPY . /usr/src/app
-
+COPY requirements.txt ./
+RUN pip install --upgrade pip
+RUN pip install --no-cache-dir -r requirements.txt
+RUN git clone https://github.com/kylegilde/D622-Machine-Learning /usr/src/app/D622-Machine-Learning
 EXPOSE 5000
-
-CMD ["python", "./main.py" ]
+CMD [ "python", "/usr/src/app/D622-Machine-Learning/main.py" ]
